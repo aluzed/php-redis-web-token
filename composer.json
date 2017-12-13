@@ -1,0 +1,13 @@
+{
+    "name": "aluzed/php",
+    "require": {
+        "predis/predis": "^1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandre PENOMBRE",
+            "email": "aluzed@gmail.com"
+        }
+    ]
+}
