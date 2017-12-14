@@ -9,7 +9,6 @@
 */
 namespace RedisWebToken;
 
-require __DIR__ . '/vendor/autoload.php';
 use \Predis;
 use \Exception;
 
