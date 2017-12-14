@@ -1,15 +1,17 @@
 {
     "name": "aluzed/redis-web-token",
     "require": {
-        "predis/predis": "^1.1",
-        "phpunit/phpunit": "^6.5"
+      "predis/predis": "^1.1",
     },
-    "keywords": ["redis web token", "token", "redis token"],
+    "require-dev": {
+      "phpunit/phpunit": "^6.5"
+    },
+    "keywords": ["redis", "token"],
     "license": "MIT",
     "authors": [
-        {
-            "name": "Alexandre PENOMBRE",
-            "email": "aluzed@gmail.com"
-        }
+      {
+        "name": "Alexandre PENOMBRE",
+        "email": "aluzed@gmail.com"
+      }
     ]
 }
