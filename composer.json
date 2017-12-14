@@ -4,6 +4,7 @@
       "predis/predis": "^1.1",
       "php": "^5.3.3 || ^7.0"
     },
+    "minimum-stability": "dev",
     "require-dev": {
       "phpunit/phpunit": "^6.5"
     },
@@ -19,5 +20,5 @@
         "classmap": [
             "src/"
         ]
-    },
+    }
 }
