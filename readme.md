@@ -61,3 +61,66 @@ $rwt->destroy($token, $secretKey);
 
 ?>
 ```
+
+---
+
+## RWT Parameters
+
+When you require RWT, you should pass extra parameters to the function :
+
+* {Array} Redis configuration, for example host, port, prefix...
+* {Array} Custom RWT configuration, see options
+
+## RWT Custom Options
+
+| Parameter          | Type     | Details                                                             |
+|--------------------|:---------|:--------------------------------------------------------------------|
+| expire             | Integer  | Set the token TTL in seconds                                        |
+| verifyExtendsToken | Boolean  | Extend automatically the token life each time we check its validity |
+
+---
+
+## Methods
+
+
+### sign
+
+Generate the redis token.
+
+**Parameters**
+
+* {Object} User object
+* {String} Secret
+* {Object} expire key : Custom expire date (be careful with this value, if you use revive, your global expire configuration will overwrite this value each time we'll call verify method)
+
+
+### verify
+
+Check if hour token is alive an return the User object values we set at connection, if you edit user values during the session, those data may be outdated. You must call the sign method each time you update your user's values.
+
+**Parameters**
+
+* {String} Token
+* {String} Secret
+
+
+### extend
+
+Reset the TTL of our token with default expire value in our configuration.
+
+**Parameters**
+
+* {String} Token
+* {String} Secret
+
+### destroy
+
+Destroy the token.
+
+**Parameters**
+
+* {String} Token
+* {String} Secret
+
+
+---
